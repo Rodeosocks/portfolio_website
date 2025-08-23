@@ -1,11 +1,42 @@
-/*!
- * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+/*
+File to Edit: /_includes/css/main.css
+
+Instructions:
+1. Open the file located at /_includes/css/main.css in your project.
+2. Delete all the existing content in that file.
+3. Copy and paste all the code from this block into that file.
+4. Save the file. Your local Jekyll server should automatically refresh, and you'll see the new styles.
+*/
+
+/* ================================================================================
+CUSTOMIZATIONS
+Here are the new styles you requested. You can easily tweak the values here.
+================================================================================
+*/
+
+/* 1. IMPORT NEW FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700&family=Mr+Dafoe&display=swap');
+
+
+/* 2. CUSTOM COLOR PALETTE */
+:root {
+  --primary-color: #ff5c5c;   /* A vibrant coral/red accent */
+  --secondary-color: #4c4c4c; /* A dark gray for text and navigation */
+  --background-color: #fdfbf5; /* A very light, warm off-white */
+  --light-gray: #f9f6f0;     /* A warmer, creamier white */
+  --accent-color: #3139fb;     /* The vibrant blue you set */
+  --beige-color: #fffcec;      /* The new beige for portfolio/contact */
+}
+
+/* ================================================================================
+ORIGINAL THEME STYLES (MODIFIED TO USE CUSTOM COLORS & FONTS)
+================================================================================
+*/
 
 body {
     overflow-x: hidden;
+    background-color: var(--background-color);
+    font-family: 'Lato', sans-serif; /* Body font */
 }
 
 p {
@@ -22,7 +53,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #{{ site.color.primary }};
+    color: var(--primary-color);
 }
 
 h1,
@@ -31,9 +62,10 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Playfair Display', serif;
+    text-transform: none;
     font-weight: 700;
+    color: var(--secondary-color);
 }
 
 hr.star-light,
@@ -44,7 +76,6 @@ hr.star-primary {
     border: 0;
     border-top: solid 5px;
     text-align: center;
-    overflow: visible;
 }
 
 hr.star-light:after,
@@ -64,26 +95,28 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    background-color: #{{ site.color.primary }};
+    background-color: var(--primary-color);
 }
 
 hr.star-primary {
-    border-color: #{{ site.color.secondary }};
+    border-color: var(--secondary-color);
 }
 
 hr.star-primary:after {
-    color: #{{ site.color.secondary }};
-    background-color: #fff;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
 }
 
 .img-centered {
     margin: 0 auto;
 }
 
+/* UPDATED HEADER STYLES */
 header {
     text-align: center;
     color: #fff;
-    background: #{{ site.color.primary }};
+    background-color: var(--accent-color);
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
 
 header .container {
@@ -98,8 +131,8 @@ header img {
 
 header .intro-text .name {
     display: block;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Playfair Display', serif;
+    text-transform: none;
     font-size: 2em;
     font-weight: 700;
 }
@@ -109,7 +142,7 @@ header .intro-text .skills {
     font-weight: 300;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     header .container {
         padding-top: 200px;
         padding-bottom: 100px;
@@ -124,7 +157,7 @@ header .intro-text .skills {
     }
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     .navbar-fixed-top {
         padding: 25px 0;
         -webkit-transition: padding .3s;
@@ -149,9 +182,14 @@ header .intro-text .skills {
 }
 
 .navbar {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Playfair Display', serif;
+    text-transform: none;
     font-weight: 700;
+}
+
+/* UPDATED: Special font for the main website title */
+.navbar-brand {
+    font-family: 'Mr Dafoe', cursive;
 }
 
 .navbar a:focus {
@@ -171,6 +209,47 @@ header .intro-text .skills {
     border: 0;
 }
 
+/* NAVBAR STICKY FIX & COLOR UPDATE */
+.navbar-default {
+    background-color: var(--accent-color);
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    border-color: var(--accent-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+/* SINE WAVE ON NAVBAR (COLOR FIXED) */
+.navbar-default::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 8'%3E%3Cpath d='M0 4 Q 4 8 8 4 T 16 4 V 0 H 0 Z' fill='%233139fb'/%3E%3C/svg%3E");
+    background-size: 16px 8px;
+    background-repeat: repeat-x;
+    transform: translateY(100%);
+    z-index: 1000;
+}
+
+/* UPDATED: Navbar highlight colors */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: var(--primary-color);
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+
 section {
     padding: 100px 0;
 }
@@ -180,12 +259,45 @@ section h2 {
     font-size: 3em;
 }
 
+/* ABOUT SECTION COLOR UPDATE */
 section.success {
     color: #fff;
-    background: #{{ site.color.primary }};
+    position: relative;
+    background-color: var(--primary-color);
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
-@media(max-width:767px) {
+section.success h2 {
+    color: #fff;
+}
+
+#portfolio {
+    background-color: var(--beige-color); /* UPDATED */
+    position: relative;
+    padding-top: 115px;
+}
+
+/* SINE WAVE EDGE (COLOR FIXED) */
+#portfolio::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 8'%3E%3Cpath d='M0 5 Q 4 0 8 5 T 16 5 V 8 H 0 Z' fill='%23fffcec'/%3E%3C/svg%3E");
+    background-size: 16px 8px;
+    background-repeat: repeat-x;
+    z-index: 1;
+}
+
+/* UPDATED: Contact section background color */
+#contact {
+    background-color: var(--beige-color);
+}
+
+
+@media (max-width: 767px) {
     section {
         padding: 75px 0;
     }
@@ -193,6 +305,22 @@ section.success {
     section.first {
         padding-top: 75px;
     }
+}
+
+/* PORTFOLIO GRID LAYOUT FIX */
+@media (min-width: 768px) {
+    #portfolio .portfolio-item {
+        margin: 0 0 30px;
+        width: 33.33333333%;
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+#portfolio .row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 #portfolio .portfolio-item {
@@ -207,15 +335,26 @@ section.success {
     max-width: 400px;
 }
 
+/* SQUIRCLE SHAPE FOR PORTFOLIO ITEMS (RELIABLE METHOD) */
+#portfolio .portfolio-item .portfolio-link img {
+   display: block;
+   width: 100%;
+   border-radius: 70px;
+}
+
+
 #portfolio .portfolio-item .portfolio-link .caption {
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     opacity: 0;
-    background: rgba({{ site.color.primary-rgb }},.9);
+    background: hsla(0, 100%, 68%, 0.9);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
+    border-radius: 70px;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
@@ -246,39 +385,6 @@ section.success {
     z-index: 2;
 }
 
-@media(min-width:767px) {
-    #portfolio .portfolio-item {
-        margin: 0 0 30px;
-    }
-}
-
-/* Flexbox Portfolio Grid */
-@media (min-width: 640px) {
-    .portfolio-flex-grid .portfolio-flex-row {
-      display: flex;
-      flex-flow: row wrap;
-      align-items: stretch;
-      justify-content: space-between;
-    }
-    .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
-      flex: 1 0 49%;
-      max-width: 49%;
-    }
-  }
-  @media (min-width: 960px) {
-    .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
-      flex: 1 0 32%;
-      max-width: 32%;
-    }
-  }
-  /* A large grid might need four columns on widescreen layouts */
-  /* @media (min-width: 1380px) {
-    .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
-      flex: 1 0 23.5%;
-      max-width: 23.5%;
-    }
-  } */
-
 .btn-outline {
     margin-top: 15px;
     border: solid 2px #fff;
@@ -293,15 +399,30 @@ section.success {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: #{{ site.color.primary }};
+    color: var(--primary-color);
     background: #fff;
 }
+
+/* UPDATED: Contact form button color */
+.btn-success {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active {
+    background-color: #e64a4a; /* A slightly darker salmon for hover */
+    border-color: #e64a4a;
+}
+
 
 .floating-label-form-group {
     position: relative;
     margin-bottom: 0;
     padding-bottom: .5em;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
 }
 
 .floating-label-form-group input,
@@ -329,15 +450,15 @@ section.success {
     vertical-align: middle;
     vertical-align: baseline;
     opacity: 0;
-    -webkit-transition: top .3s ease,opacity .3s ease;
-    -moz-transition: top .3s ease,opacity .3s ease;
-    -ms-transition: top .3s ease,opacity .3s ease;
-    transition: top .3s ease,opacity .3s ease;
+    -webkit-transition: top .3s ease, opacity .3s ease;
+    -moz-transition: top .3s ease, opacity .3s ease;
+    -ms-transition: top .3s ease, opacity .3s ease;
+    transition: top .3s ease, opacity .3s ease;
 }
 
-.floating-label-form-group::not(:first-child) {
+.floating-label-form-group:not(:first-child) {
     padding-left: 14px;
-    border-left: 1px solid #eee;
+    border-left: 1px solid #ddd;
 }
 
 .floating-label-form-group-with-value label {
@@ -346,11 +467,11 @@ section.success {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #{{ site.color.primary }};
+    color: var(--primary-color);
 }
 
 form .row:first-child .floating-label-form-group {
-    border-top: 1px solid #eee;
+    border-top: 1px solid #ddd;
 }
 
 footer {
@@ -361,25 +482,41 @@ footer h3 {
     margin-bottom: 30px;
 }
 
+/* UPDATED: Footer background colors */
 footer .footer-above {
     padding-top: 50px;
-    background-color: #{{ site.color.secondary }};
+    background-color: var(--light-gray);
+    color: var(--secondary-color); /* Change text color for readability */
+    position: relative; /* Needed for the wave */
 }
 
-footer .footer-col {
-    margin-bottom: 50px;
+/* NEW: WAVY EDGE FOR FOOTER (COLOR FIXED) */
+footer .footer-above::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    /* This SVG now draws a blue LINE, not a filled shape */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 8'%3E%3Cpath d='M0 5 Q 4 0 8 5 T 16 5' fill='none' stroke='%233139fb' stroke-width='2'/%3E%3C/svg%3E");
+    background-size: 16px 8px;
+    background-repeat: repeat-x;
+    z-index: 1;
 }
+
 
 footer .footer-below {
     padding: 25px 0;
-    background-color: #{{ site.color.secondary-dark }};
+    background-color: var(--light-gray);
+    color: var(--secondary-color); /* Change text color for readability */
 }
 
 .btn-social {
     display: inline-block;
     width: 50px;
     height: 50px;
-    border: 2px solid #fff;
+    border: 2px solid var(--secondary-color); /* Change border for readability */
     border-radius: 100%;
     text-align: center;
     font-size: 20px;
@@ -456,7 +593,7 @@ footer .footer-below {
     width: 1px;
     height: 75px;
     margin-left: 35px;
-    background-color: #{{ site.color.secondary }};
+    background-color: var(--secondary-color);
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -466,19 +603,13 @@ footer .footer-below {
     z-index: 1052;
     width: 1px;
     height: 75px;
-    background-color: #{{ site.color.secondary }};
+    background-color: var(--secondary-color);
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
 
-.navbar-nav>.active>a {
-    background-color: #{{ site.color.secondary-dark }} !important;
-}
-
-/* Fix modal mouse wheel issues */
-/* https://github.com/twbs/bootstrap/issues/16297 */
-.modal.fade.in {
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
+.portfolio-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
 }
