@@ -1,10 +1,10 @@
 # Site settings
 title: Sawyer Greaves
 email: greaves.sawyer@gmail.com
-url: https://github.com/jeromelachaud/freelancer-theme
+url: https://github.com/Rodeosocks/portfolio_website
 description: "My Projects!"
-keywords: "Robotics, Engineering, Projects"
-skills: "Design for Manufacturing - Scientific Computing - Researcher"
+keywords: "robotics, engineering, research, personal, academics"
+skills: "Robotics - 3D Design - Controls"
 meta_author: Greaves Sawyer
 
 # Google webmaster tools
@@ -34,29 +34,27 @@ color:
 footer:
   copyright: Sawyer Greaves
   location: Salt Lake City, Utah
-  social: Around the Web
+  social: Socials
   credits: Credits
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
+    url: https://x.com/sawyer_greaves
+  - title: instagram
+    url: https://www.instagram.com/sawyer_greaves/
+  - title: linkedin
+    url: https://www.linkedin.com/in/sawyer-greaves-555616277/
   - title: github
-    url: http://github.com/jekyll
+    url: http://github.com/Rodeosocks
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: University of Utah
+  - line: Magnetic and Medical Robotics Lab
 
 # Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+credits: 'Thank you to <a href="http://startbootstrap.com">startbootstrap</a> and <a href="https://github.com/jeromelachaud">Jerome Lachaud</a> for the website template.'
 
 # Build settings
 markdown: kramdown

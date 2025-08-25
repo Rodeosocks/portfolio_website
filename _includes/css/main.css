@@ -105,13 +105,15 @@ header {
 }
 
 header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    /* padding-top: 100px; */
+    /* padding-bottom: 50px; */
+    margin-top: -50px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.75);
     position: relative;
     bottom: -50px;
     background-color: var(--accent-color);
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    border-radius: 50px;
 }
 
 header img {
@@ -156,7 +158,7 @@ header .intro-text .skills {
     }
 
     .navbar-fixed-top .navbar-brand {
-        font-size: 2.5em;
+        font-size: 3em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
@@ -167,7 +169,7 @@ header .intro-text .skills {
     }
 
     .navbar-fixed-top.navbar-shrink .navbar-brand {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 }
 
@@ -250,7 +252,7 @@ section {
     background-color: var(--beige-color);
     margin-top: -50px;
     padding-bottom: 200px;
-    margin-bottom: -50px;
+    margin-bottom: -100px;
 }
 
 section h2 {
@@ -268,20 +270,19 @@ section.success {
     padding-top: 100px;
     padding-bottom: 100px;
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 section.success .container {
     padding-top: 100px;
     padding-bottom: 100px;
-    /* height: 573px; */
-    margin-top: -200px;
-    margin-bottom: -200px;
+    margin-top: -150px;
+    margin-bottom: -150px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.75);
     position: relative;
-    /* bottom: -50px; */
     background-color: var(--primary-color);
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    border-radius: 50px;
 }
 
 section.success h2 {
@@ -345,7 +346,7 @@ section.success h2 {
 #portfolio .portfolio-item .portfolio-link img {
    display: block;
    width: 100%;
-   border-radius: 15%;
+   border-radius: 50px;
 }
 
 
@@ -361,7 +362,7 @@ section.success h2 {
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
-    border-radius: 15%;
+    border-radius: 50px;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
@@ -408,16 +409,17 @@ section.success h2 {
 
 /* UPDATED: Contact form button color */
 .btn-success {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transition: color 0.3s ease; /* Adds a smooth color change effect */
     color: #fff;
 }
 .btn-success:hover,
 .btn-success:focus,
 .btn-success:active,
 .btn-success.active {
-    background-color: #e64a4a; /* A slightly darker salmon for hover */
-    border-color: #e64a4a;
+    background-color: var(--primary-color); /* A slightly darker salmon for hover */
+    border-color: var(--primary-color);
 }
 
 .floating-label-form-group {
@@ -476,6 +478,7 @@ form .row:first-child .floating-label-form-group {
 
 footer {
     color: #fff;
+    margin-top: 100px;
 }
 
 footer h3 {

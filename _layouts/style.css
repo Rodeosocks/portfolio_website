@@ -1,2 +1,28 @@
 {% include css/bootstrap.min.css %}
 {% include css/main.css %}
+
+/* Force link visibility in the About section */
+section#about p a {
+    color: #4c4c4c !important;
+    text-decoration: none; /* Removes the underline */
+}
+
+section#about p a:hover {
+    color: #FFFFFF !important;
+}
+
+/* Custom styles for the email link in the contact section */
+section#contact h4 a {
+    color: #4c4c4c; /* This is the dark grey/brown from your theme */
+    text-decoration: none; /* Removes the underline */
+    transition: color 0.3s ease; /* Adds a smooth color change effect */
+}
+
+section#contact h4 a:hover {
+    color: #ff5c5c; /* This is the primary teal/coral color from your theme for the hover effect */
+}
+
+/* Remove underline from links in the footer credits section */
+footer .footer-col p a {
+    text-decoration: none;
+}
