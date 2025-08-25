@@ -11,11 +11,6 @@
   --beige-color: #fffcec;      /* The new beige for portfolio/contact */
 }
 
-/* ================================================================================
-ORIGINAL THEME STYLES (MODIFIED TO USE CUSTOM COLORS & FONTS)
-================================================================================
-*/
-
 body {
     overflow-x: hidden;
     background-color: var(--background-color);
@@ -53,7 +48,7 @@ h6 {
 
 hr.star-light,
 hr.star-primary {
-    margin: 25px auto 30px;
+    margin: 15px auto 15px;
     padding: 0;
     max-width: 250px;
     border: 0;
@@ -99,20 +94,18 @@ header {
     text-align: center;
     color: #fff;
     background-color: var(--accent-color);
-    background-image: url("https://www.transparenttextures.com/patterns/subtle-dots.png");
+    background-image: url("../../assets/subtle-dots.png");
     margin-bottom: 50px;
     position: relative;
 }
 
 header .container {
-    /* padding-top: 100px; */
-    /* padding-bottom: 50px; */
     margin-top: -50px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.75);
     position: relative;
     bottom: -50px;
     background-color: var(--accent-color);
-    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    background-image: url("../../assets/asfalt-dark.png");
     border-radius: 50px;
 }
 
@@ -123,10 +116,12 @@ header img {
 
 header .intro-text .name {
     display: block;
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
+    font-family: 'Smooch', cursive;
     text-transform: none;
     font-size: 2em;
     font-weight: 700;
+    margin-bottom: -10px;
 }
 
 header .intro-text .skills {
@@ -176,7 +171,6 @@ header .intro-text .skills {
 /* UPDATED: Navbar menu font */
 .navbar {
     font-family: 'Lato', sans-serif;
-    /* text-transform: underline red 5px !important; */
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -184,7 +178,6 @@ header .intro-text .skills {
 /* Special font for the main website title */
 .navbar-brand {
     font-family: 'Smooch', cursive; /* Updated font */
-    /* text-transform: none; */
     letter-spacing: normal;
 }
 
@@ -209,7 +202,6 @@ header .intro-text .skills {
 /* NAVBAR STICKY FIX & COLOR UPDATE */
 .navbar-default {
     background-color: var(--accent-color);
-    /* background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png"); */
     border-color: var(--accent-color);
     position: fixed;
     top: 0;
@@ -266,7 +258,7 @@ section.success {
     position: relative;
     z-index: 2; /* Ensure shadow is on top */
     background-color: var(--primary-color);
-    background-image: url("https://www.transparenttextures.com/patterns/subtle-dots.png");
+    background-image: url("../../assets/subtle-dots.png");
     padding-top: 100px;
     padding-bottom: 100px;
     margin-top: 50px;
@@ -281,7 +273,7 @@ section.success .container {
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.75);
     position: relative;
     background-color: var(--primary-color);
-    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    background-image: url("../../assets/asfalt-dark.png");
     border-radius: 50px;
 }
 
@@ -332,7 +324,9 @@ section.success h2 {
 
 #portfolio .portfolio-item {
     right: 0;
-    margin: 0 0 15px;
+    margin: 0 0 30px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -340,29 +334,40 @@ section.success h2 {
     position: relative;
     margin: 0 auto;
     max-width: 400px;
+    overflow: hidden; 
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
 }
 
-/* SQUIRCLE SHAPE FOR PORTFOLIO ITEMS (RELIABLE METHOD) */
+#portfolio .portfolio-item .portfolio-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.911);
+}
+
+#portfolio .portfolio-item .portfolio-link:hover img {
+    filter: blur(2px) brightness(70%);
+}
+
 #portfolio .portfolio-item .portfolio-link img {
    display: block;
    width: 100%;
-   border-radius: 50px;
+   border-radius: 10px;
+   transition: all .3s ease-in-out;
 }
-
 
 #portfolio .portfolio-item .portfolio-link .caption {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
+    z-index: 10;
     left: 0;
     opacity: 0;
-    background: hsla(0, 100%, 68%, 0.9);
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.75);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
@@ -378,6 +383,7 @@ section.success h2 {
     text-align: center;
     font-size: 20px;
     color: #fff;
+    /* color: var(--secondary-color); */
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
@@ -482,7 +488,7 @@ footer {
 }
 
 footer h3 {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 /* UPDATED: Footer background colors */
@@ -534,6 +540,7 @@ footer .footer-below {
 .btn-social:active {
     color: #fff; /* Make icon white on hover */
     background-color: var(--secondary-color); /* Fill background on hover */
+    border: 2px solid var(--secondary-color);
 }
 
 
@@ -582,6 +589,7 @@ footer .footer-below {
 
 .portfolio-modal .modal-content img {
     margin-bottom: 30px;
+    border-radius: 10px;
 }
 
 .portfolio-modal .modal-content .item-details {
@@ -596,31 +604,17 @@ footer .footer-below {
     height: 75px;
     background-color: transparent;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-modal .close-modal i {
+  color: var(--secondary-color);
 }
 
 .portfolio-modal .close-modal:hover {
     opacity: .3;
-}
-
-.portfolio-modal .close-modal .lr {
-    z-index: 1051;
-    width: 1px;
-    height: 75px;
-    margin-left: 35px;
-    background-color: var(--secondary-color);
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.portfolio-modal .close-modal .lr .rl {
-    z-index: 1052;
-    width: 1px;
-    height: 75px;
-    background-color: var(--secondary-color);
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
 }
 
 .portfolio-modal .modal-backdrop {
@@ -628,3 +622,111 @@ footer .footer-below {
     opacity: 0;
 }
 
+/* For smaller laptop screens */
+@media (min-width: 768px) and (max-width: 1600px) {
+  header .container,
+  section.success .container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+  header {
+    margin-bottom: 0;
+  }
+
+  header .container {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    margin-top: 0;
+    bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* UPDATED: Increased the font size of your name in the navbar */
+  .navbar-brand {
+    font-size: 2.5em !important; /* Make the name with the Smooch font larger */
+  }
+
+  header .intro-text .name {
+    font-size: 2.5em;
+  }
+
+  header .intro-text .skills {
+    font-size: 1.25em;
+  }
+
+  section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  section.success {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  section.success .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+    /* background-image: none; */
+  }
+
+  section h2 {
+    font-size: 2.5em;
+  }
+
+  footer {
+    margin-top: 0;
+  }
+
+  #portfolio .portfolio-item {
+      width: 50%;
+      margin: 0 auto 30px;
+      float: none;
+      display: inline-block;
+  }
+}
+
+@media (max-width: 480px) {
+    #portfolio .portfolio-item {
+        width: 100%;
+        margin: 0 auto 30px;
+        float: none;
+    }
+}
+
+/*
+Custom styles for Portfolio Modals
+*/
+@media (min-width: 768px) {
+  .portfolio-modal .modal-content {
+    width: 70%;
+    margin: 50px auto;
+    border-radius: 10px;
+  }
+}
+
+/*
+Styles for Modal Backdrop Blur
+*/
+.content-blur {
+  transition: filter 0.3s ease-in-out;
+  filter: blur(5px); /* You can adjust the blur amount here */
+}
+
+.portfolio-modal .modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.3); /* Make backdrop more transparent to see the blur */
+}

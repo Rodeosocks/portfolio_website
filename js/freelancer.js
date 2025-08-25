@@ -35,3 +35,17 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+// Modal Blur Effect
+$(document).ready(function() {
+  // Select all the elements you want to blur
+  var pageContent = $('header, nav, #portfolio, #about, #contact, footer'); // Added 'nav' here
+
+  $('.portfolio-modal').on('show.bs.modal', function () {
+    pageContent.addClass('content-blur');
+  });
+
+  $('.portfolio-modal').on('hidden.bs.modal', function () {
+    pageContent.removeClass('content-blur');
+  });
+});
