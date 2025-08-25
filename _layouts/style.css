@@ -3,12 +3,15 @@
 
 /* Force link visibility in the About section */
 section#about p a {
-    color: #4c4c4c !important;
+    color: #ffffff !important;
     text-decoration: none; /* Removes the underline */
+    font-weight: bold;
 }
 
 section#about p a:hover {
-    color: #FFFFFF !important;
+    color: #4c4c4c !important;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 /* Custom styles for the email link in the contact section */

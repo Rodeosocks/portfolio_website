@@ -1,7 +1,8 @@
 # Site settings
 title: Sawyer Greaves
 email: greaves.sawyer@gmail.com
-url: https://github.com/Rodeosocks/portfolio_website
+url: "https://Rodeosocks.github.io"
+baseurl: "/portfolio_website"
 description: "My Projects!"
 keywords: "robotics, engineering, research, personal, academics"
 skills: "Robotics - 3D Design - Controls"

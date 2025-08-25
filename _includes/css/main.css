@@ -25,13 +25,20 @@ p.small {
     font-size: 16px;
 }
 
-a,
+a {
+    outline: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
 a:hover,
 a:focus,
 a:active,
 a.active {
     outline: 0;
     color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
 }
 
 h1,
@@ -94,7 +101,7 @@ header {
     text-align: center;
     color: #fff;
     background-color: var(--accent-color);
-    background-image: url("../../assets/subtle-dots.png");
+    background-image: url("{{ site.baseurl }}/assets/subtle-dots.png");
     margin-bottom: 50px;
     position: relative;
 }
@@ -105,7 +112,7 @@ header .container {
     position: relative;
     bottom: -50px;
     background-color: var(--accent-color);
-    background-image: url("../../assets/asfalt-dark.png");
+    background-image: url("{{ site.baseurl }}/assets/asfalt-dark.png");
     border-radius: 50px;
 }
 
@@ -258,7 +265,7 @@ section.success {
     position: relative;
     z-index: 2; /* Ensure shadow is on top */
     background-color: var(--primary-color);
-    background-image: url("../../assets/subtle-dots.png");
+    background-image: url("{{ site.baseurl }}/assets/subtle-dots.png");
     padding-top: 100px;
     padding-bottom: 100px;
     margin-top: 50px;
@@ -273,7 +280,7 @@ section.success .container {
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.75);
     position: relative;
     background-color: var(--primary-color);
-    background-image: url("../../assets/asfalt-dark.png");
+    background-image: url("{{ site.baseurl }}/assets/asfalt-dark.png");
     border-radius: 50px;
 }
 
@@ -383,7 +390,6 @@ section.success h2 {
     text-align: center;
     font-size: 20px;
     color: #fff;
-    /* color: var(--secondary-color); */
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
@@ -417,14 +423,14 @@ section.success h2 {
 .btn-success {
     background-color: var(--secondary-color);
     border-color: var(--secondary-color);
-    transition: color 0.3s ease; /* Adds a smooth color change effect */
+    transition: all 0.3s ease; /* Adds a smooth color change effect */
     color: #fff;
 }
 .btn-success:hover,
 .btn-success:focus,
 .btn-success:active,
 .btn-success.active {
-    background-color: var(--primary-color); /* A slightly darker salmon for hover */
+    background-color: var(--primary-color);
     border-color: var(--primary-color);
 }
 
@@ -709,13 +715,35 @@ footer .footer-below {
 }
 
 /*
-Custom styles for Portfolio Modals
+Custom styles for Portfolio Modals - Centering Fix
 */
 @media (min-width: 768px) {
+
+  /* Make the modal window narrower */
   .portfolio-modal .modal-content {
     width: 70%;
     margin: 50px auto;
     border-radius: 10px;
+  }
+
+  /*
+  This is the key fix. It removes the problematic left margin
+  and centers the content column automatically.
+  */
+  .portfolio-modal .col-lg-8 {
+    float: none;
+    margin-left: 10% !important;
+    width: 55% !important;
+  }
+
+  /* These styles ensure the content inside the modal wraps correctly */
+  .portfolio-modal .modal-body img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .portfolio-modal .modal-body p {
+    word-wrap: break-word;
   }
 }
 

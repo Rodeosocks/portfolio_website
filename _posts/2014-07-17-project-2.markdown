@@ -1,13 +1,14 @@
 ---
+title: Mechanical Differential with Camera
 layout: default
 modal-id: 2
-date: 2014-07-17
-img: cake.png
+date: 2025-08-24
+img: differntial.png
 alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+project-date: June - September 2025
+client: personal project
+category: Hardware design, controls system design, computer vision, circuit design, 3D modeling, 3D printing, git, microcontrollers
+description: "[Github Repo](https://github.com/Rodeosocks/Laser-Pointer-Robot) - [Onshape Folder](https://cad.onshape.com/documents?resourceType=folder&nodeId=37651e437204c166a238473c&column=modifiedAt&sortOrder=desc)"
 ---
 <!--
 mechanical differential project w/ camera
