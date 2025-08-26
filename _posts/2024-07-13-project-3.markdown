@@ -2,7 +2,7 @@
 title: 6DOF Magnetic Manipulation Space Simulator
 layout: default
 modal-id: 1
-date: 2025-08-25
+date: 2025-08-23
 img: mmrobotics.png
 alt: image-alt
 project-date: May 2025 - Present

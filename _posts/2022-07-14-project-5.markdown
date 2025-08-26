@@ -2,7 +2,7 @@
 title: Autonomous Block Collecting and Sorting Robot
 layout: default
 modal-id: 5
-date: 20-12-04
+date: 2025-08-20
 img: mechatronics.png
 alt: image-alt
 project-date: August - December 2024

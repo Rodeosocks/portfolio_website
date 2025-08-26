@@ -1,14 +1,13 @@
 ---
+title: 5-DOF Robot Arm
 layout: default
 modal-id: 6
-date: 2014-07-15
-img: submarine.png
+date: 2022-12-06
+img: robot_arm.png
 alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+project-date: July - December 2024
+client: personal project
+category: robotics, C++, controls system design, 3D modeling, circuit design, hardware design, 3D printing
+description: |
+    5 DOF robot arm with a gripper. The focus of this project was the circuit design, as the hardware was mostly designed by [HowToMechatronics](https://howtomechatronics.com/tutorials/arduino/diy-arduino-robot-arm-with-smartphone-control/).
 ---
-<!--
-Robot arm
--->

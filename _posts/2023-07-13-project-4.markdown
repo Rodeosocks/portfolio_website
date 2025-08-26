@@ -2,7 +2,7 @@
 title: Mechanical Differential with Camera
 layout: default
 modal-id: 2
-date: 2024-08-24
+date: 2025-08-25
 img: differntial.png
 alt: image-alt
 project-date: June - September 2025
