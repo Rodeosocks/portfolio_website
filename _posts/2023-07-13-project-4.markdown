@@ -1,0 +1,15 @@
+---
+title: Mechanical Differential with Camera
+layout: default
+modal-id: 2
+date: 2024-08-24
+img: differntial.png
+alt: image-alt
+project-date: June - September 2025
+client: personal project
+category: hardware design, controls system design, computer vision, circuit design, 3D modeling, 3D printing, git, microcontrollers, robotics, python, C++
+description: |
+    [Github](https://github.com/Rodeosocks/Laser-Pointer-Robot) - [Onshape](https://cad.onshape.com/documents?resourceType=folder&nodeId=37651e437204c166a238473c&column=modifiedAt&sortOrder=desc)
+
+    I designed, manufactured, and built a mechanical differential, then I mounted a camera on top. This allows the camera to have a large potiential viewing area. I wirelessly streamed the live video feed to my laptop, which performed some image tracking on the desired object, and wirelessly commanded the motors to keep the object in frame. Check out the code repository and onshape folder for more details!
+---

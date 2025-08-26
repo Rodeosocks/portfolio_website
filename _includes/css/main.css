@@ -313,29 +313,6 @@ section.success h2 {
     }
 }
 
-/* PORTFOLIO GRID LAYOUT FIX */
-@media (min-width: 768px) {
-    #portfolio .portfolio-item {
-        margin: 0 0 30px;
-        width: 33.33333333%;
-        float: left;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-#portfolio .row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-#portfolio .portfolio-item {
-    right: 0;
-    margin: 0 0 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 #portfolio .portfolio-item .portfolio-link {
     display: block;
     position: relative;
@@ -697,22 +674,11 @@ footer .footer-below {
   footer {
     margin-top: 0;
   }
-
-  #portfolio .portfolio-item {
-      width: 50%;
-      margin: 0 auto 30px;
-      float: none;
-      display: inline-block;
-  }
 }
 
-@media (max-width: 480px) {
-    #portfolio .portfolio-item {
-        width: 100%;
-        margin: 0 auto 30px;
-        float: none;
-    }
-}
+/* @media (max-width: 480px) {
+
+} */
 
 /*
 Custom styles for Portfolio Modals - Centering Fix
@@ -757,4 +723,43 @@ Styles for Modal Backdrop Blur
 
 .portfolio-modal .modal-backdrop {
   background-color: rgba(0, 0, 0, 0.3); /* Make backdrop more transparent to see the blur */
+}
+
+/*-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+ - Masonry Grid for Portfolio Section
+ - -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+
+.portfolio-grid {
+  -webkit-column-count: 1; /* Chrome, Safari, Opera */
+  -moz-column-count: 1;    /* Firefox */
+  column-count: 1;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+}
+
+.portfolio-grid .portfolio-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 30px;
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+  page-break-inside: avoid;           /* Firefox */
+  break-inside: avoid;                /* IE 10+ */
+}
+
+/* Responsive columns for larger screens */
+@media (min-width: 768px) {
+  .portfolio-grid {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-grid {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
 }

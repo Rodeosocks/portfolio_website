@@ -1,0 +1,15 @@
+---
+title: Total Station Visualization
+layout: default
+modal-id: 3
+date: 2025-07-11
+img: TSV.png
+alt: image-alt
+project-date: June 2025
+client: University of Pittsburch Archeology Department
+category: data science, python, git
+description: |
+    [Github](https://github.com/Rodeosocks/Total-Station-Visualization)
+
+    3D positioning and catagorical data of significant archeological artifacts is taken and plotted in such a way as to be able to see the density and distrobution of artifacts. There is the option to filter by specific catagories of objects, and automatic data cleanup.
+---

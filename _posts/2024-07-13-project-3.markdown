@@ -1,0 +1,13 @@
+---
+title: 6DOF Magnetic Manipulation Space Simulator
+layout: default
+modal-id: 1
+date: 2025-08-25
+img: mmrobotics.png
+alt: image-alt
+project-date: May 2025 - Present
+client: Magnetic and Medical Robotics Lab, U of U
+category: robotics, magnetics, python, controls system design, 3D modeling, git
+description: |
+    I developed a simulation suite in python to test and develop various control system strategies for 6 degree-of-freedom manipulation of conductive objects in space through the rotation of a nearby magnetic dipole. This simulator was used in **THIS PAPER** as a digital twin.
+---

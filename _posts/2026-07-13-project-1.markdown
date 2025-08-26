@@ -1,0 +1,15 @@
+---
+title: '"Zoning" Inverse Kinematics'
+layout: default
+modal-id: 4
+date: 2023-12-02
+img: zoning_ik.png
+alt: image-alt
+project-date: December 2023
+client: personal project
+category: robotics, python, git
+description: |
+    [Github](https://github.com/Rodeosocks/Zoning-IK)
+
+    Here I created a novel method for numerically solving inverse kinematics problems for serial link manipulators with redundant degrees of freedom. It uses the fundamental idea that the "best" pose is the one that reaches the target position while moving the joints the least.
+---

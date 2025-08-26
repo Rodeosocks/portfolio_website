@@ -1,0 +1,12 @@
+---
+title: Autonomous Block Collecting and Sorting Robot
+layout: default
+modal-id: 5
+date: 20-12-04
+img: mechatronics.png
+alt: image-alt
+project-date: August - December 2024
+client: University of Utah
+category: hardware design, controls system design, circuit design, 3D modeling, 3D printing, microcontrollers, robotics, C++, autonomous systems
+description: Our team of four designed, manufactured, and programmed a robot to participate in the bi-annual mechanical engineering robotics competition. This robot autonomously navigated a dynamic enviroment, collected and sorted colored blocks, and delivered those blocks to a "home" posiion.
+---
